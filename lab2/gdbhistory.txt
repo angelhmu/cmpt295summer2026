@@ -1,0 +1,360 @@
+Note: breakpoint 1 also set at pc 0x4013ce.
+Breakpoint 6 at 0x4013ce: file unknown.S, line 6.
+Breakpoint 7 at 0x4013ee: file unknown.S, line 21.
+Watchpoint 8: $rcx
+Watchpoint 9: $rbx
+Watchpoint 10: $rdi
+Program not restarted.
+Starting program: /home/hba56/cmpt295summer2026/lab2/a.out 
+Downloading separate debug info for system-supplied DSO at 0x7ffff7ffd000
+[###                                                                                                                                                                ][ ###                                                                                                                                                               ]                                                                                                                                                                       
+Breakpoint 7, _start () at unknown.S:21
+
+Watchpoint 5: $rdi
+
+Old value = 0
+New value = 60
+
+Watchpoint 10: $rdi
+
+Old value = 0
+New value = 60
+_start () at unknown.S:22
+
+Breakpoint 1, do_something () at unknown.S:6
+do_something () at unknown.S:7
+
+Watchpoint 2: $rcx
+
+Old value = 0
+New value = 1
+
+Watchpoint 8: $rcx
+
+Old value = 0
+New value = 1
+do_something () at unknown.S:8
+loop_top () at unknown.S:11
+
+Watchpoint 3: $rbx
+
+Old value = 0
+New value = 1
+
+Watchpoint 9: $rbx
+
+Old value = 0
+New value = 1
+loop_top () at unknown.S:12
+
+Watchpoint 2: $rcx
+
+Old value = 1
+New value = 3
+
+Watchpoint 8: $rcx
+
+Old value = 1
+New value = 3
+loop_top () at unknown.S:13
+
+Watchpoint 3: $rbx
+
+Old value = 1
+New value = 4
+
+Watchpoint 9: $rbx
+
+Old value = 1
+New value = 4
+loop_top () at unknown.S:12
+
+Watchpoint 2: $rcx
+
+Old value = 3
+New value = 5
+
+Watchpoint 8: $rcx
+
+Old value = 3
+New value = 5
+loop_top () at unknown.S:13
+
+Watchpoint 3: $rbx
+
+Old value = 4
+New value = 9
+
+Watchpoint 9: $rbx
+
+Old value = 4
+New value = 9
+loop_top () at unknown.S:12
+
+Watchpoint 2: $rcx
+
+Old value = 5
+New value = 7
+
+Watchpoint 8: $rcx
+
+Old value = 5
+New value = 7
+loop_top () at unknown.S:13
+
+Watchpoint 3: $rbx
+
+Old value = 9
+New value = 16
+
+Watchpoint 9: $rbx
+
+Old value = 9
+New value = 16
+loop_top () at unknown.S:12
+
+Watchpoint 2: $rcx
+
+Old value = 7
+New value = 9
+
+Watchpoint 8: $rcx
+
+Old value = 7
+New value = 9
+loop_top () at unknown.S:13
+
+Watchpoint 3: $rbx
+
+Old value = 16
+New value = 25
+
+Watchpoint 9: $rbx
+
+Old value = 16
+New value = 25
+loop_top () at unknown.S:12
+
+Watchpoint 2: $rcx
+
+Old value = 9
+New value = 11
+
+Watchpoint 8: $rcx
+
+Old value = 9
+New value = 11
+loop_top () at unknown.S:13
+
+Watchpoint 3: $rbx
+
+Old value = 25
+New value = 36
+
+Watchpoint 9: $rbx
+
+Old value = 25
+New value = 36
+loop_top () at unknown.S:12
+
+Watchpoint 2: $rcx
+
+Old value = 11
+New value = 13
+
+Watchpoint 8: $rcx
+
+Old value = 11
+New value = 13
+loop_top () at unknown.S:13
+
+Watchpoint 3: $rbx
+
+Old value = 36
+New value = 49
+
+Watchpoint 9: $rbx
+
+Old value = 36
+New value = 49
+loop_top () at unknown.S:12
+
+Watchpoint 2: $rcx
+
+Old value = 13
+New value = 15
+
+Watchpoint 8: $rcx
+
+Old value = 13
+New value = 15
+loop_top () at unknown.S:13
+
+Watchpoint 3: $rbx
+
+Old value = 49
+New value = 64
+
+Watchpoint 9: $rbx
+
+Old value = 49
+New value = 64
+loop_top () at unknown.S:12
+
+Watchpoint 2: $rcx
+
+Old value = 15
+New value = 17
+
+Watchpoint 8: $rcx
+
+Old value = 15
+New value = 17
+loop_top () at unknown.S:13
+
+Watchpoint 4: $rax
+
+Old value = 0
+New value = 64
+loop_top () at unknown.S:17
+
+Watchpoint 3: $rbx
+
+Old value = 64
+New value = 0
+
+Watchpoint 9: $rbx
+
+Old value = 64
+New value = 0
+loop_top () at unknown.S:18
+_start () at unknown.S:25
+
+Watchpoint 5: $rdi
+
+Old value = 60
+New value = 0
+
+Watchpoint 10: $rdi
+
+Old value = 60
+New value = 0
+_start () at unknown.S:26
+
+Watchpoint 4: $rax
+
+Old value = 64
+New value = 0
+0x00000000004013be in syscall_exit ()
+set history save on
+set history size unlimited
+save history gdbhistory.txt
+set history filename gdbhistory.txt
+break 5
+run
+next
+watch $rcx
+watch $rbx
+watch $rax
+watch $rdi
+next
+next
+next
+next
+next
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+next
+next
+next
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+save history
+save history gdbhistory.txt
+help save
+save gdb-index
+help save
+help save
+set loggin file gdbhistory.txt
+set logging file gdbhistory.txt
+set logging on
+break 5
+break 20
+watch $rcx
+watch $rbx
+watch $rdi
+run
+run
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+exit

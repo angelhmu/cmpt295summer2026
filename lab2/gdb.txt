@@ -1,0 +1,97 @@
+
+Breakpoint 1, do_something () at unknown.S:6
+Watchpoint 3: $rbx
+Watchpoint 4: $rc
+Watchpoint 5: $rcx
+Watchpoint 6: $rdi
+do_something () at unknown.S:7
+
+Watchpoint 5: $rcx
+
+Old value = 0
+New value = 1
+do_something () at unknown.S:8
+loop_top () at unknown.S:11
+
+Watchpoint 3: $rbx
+
+Old value = 0
+New value = 1
+loop_top () at unknown.S:12
+
+Watchpoint 5: $rcx
+
+Old value = 1
+New value = 3
+loop_top () at unknown.S:13
+
+Watchpoint 3: $rbx
+
+Old value = 1
+New value = 0
+loop_top () at unknown.S:18
+_start () at unknown.S:25
+
+Watchpoint 6: $rdi
+
+Old value = 1
+New value = 0
+_start () at unknown.S:26
+
+Watchpoint 6: $rdi
+
+Old value = 0
+New value = 60
+0x00000000004013c6 in syscall_exit ()
+Breakpoint 1 at 0x4013ce: file unknown.S, line 6.
+No registers.
+Starting program: /home/hba56/cmpt295summer2026/lab2/a.out 
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Debuginfod has been enabled.
+To make this setting permanent, add 'set debuginfod enabled on' to .gdbinit.
+Downloading separate debug info for system-supplied DSO at 0x7ffff7ffd000
+[###                                                                                                                                                                ][ ###                                                                                                                                                               ]                                                                                                                                                                       
+Breakpoint 1, do_something () at unknown.S:6
+Watchpoint 2: $rbx
+Watchpoint 3: $rcx
+Watchpoint 4: $rdi
+do_something () at unknown.S:7
+
+Watchpoint 3: $rcx
+
+Old value = 0
+New value = 1
+do_something () at unknown.S:8
+loop_top () at unknown.S:11
+
+Watchpoint 2: $rbx
+
+Old value = 0
+New value = 1
+loop_top () at unknown.S:12
+
+Watchpoint 3: $rcx
+
+Old value = 1
+New value = 3
+loop_top () at unknown.S:13
+
+Watchpoint 2: $rbx
+
+Old value = 1
+New value = 4
+loop_top () at unknown.S:12
+
+Watchpoint 3: $rcx
+
+Old value = 3
+New value = 5
+loop_top () at unknown.S:13
+
+Watchpoint 2: $rbx
+
+Old value = 4
+New value = 0
+loop_top () at unknown.S:18

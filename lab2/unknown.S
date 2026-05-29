@@ -2,7 +2,7 @@
     .global _start
     .text
 
-do_something:
+do_something: # Hershey Batore | 301454123
     push %rbx
     mov $1, %rcx
     mov $0, %rbx
@@ -18,7 +18,7 @@ loop_top:
     ret
 
 _start:
-    mov $60, %rdi
+    mov $4, %rdi
     call do_something
         
     # exit
