@@ -1,3 +1,8 @@
 1. x = %rcx, y = %rbx
-    do_something takes x and and keeps adding it to y until it is greater than or equal to the given value.
-2. 
+    do_something takes x and and keeps adding 
+    it to y until it is greater than or equal 
+    to the given value.
+2. the registers I used for x and the local 
+    variables are all preserved since the
+    function calls f multiple times so I 
+    dont want any of those values to change.
