@@ -7,7 +7,10 @@ Watchpoint 10: $rdi
 Program not restarted.
 Starting program: /home/hba56/cmpt295summer2026/lab2/a.out 
 Downloading separate debug info for system-supplied DSO at 0x7ffff7ffd000
-[###                                                                                                                                                                ][ ###                                                                                                                                                               ]                                                                                                                                                                       
+
+[###                                                                                                                                                                ]
+[ ###                                                                                                                                                               ]
+                                                                                                                                                                       
 Breakpoint 7, _start () at unknown.S:21
 
 Watchpoint 5: $rdi
