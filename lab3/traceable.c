@@ -6,7 +6,7 @@
 char buffer[BLEN];
 char* digits = "0123456789abcdef";
 
-uint64_t factorial(uint64_t n) {
+uint64_t factorial(uint64_t n) {    //Hershey Batore | 301454123
     if ( n == 0 ) {
         return 1;
     } else {
@@ -17,7 +17,7 @@ uint64_t factorial(uint64_t n) {
     }
 }
 
-char* to_base(uint64_t v, short base, char ending) {
+char* to_base(uint64_t v, short base, char ending) {    //Hershey Batore | 301454123
     unsigned char c;
     char* pos = buffer + BLEN - 2;
     buffer[BLEN-1] = ending;
