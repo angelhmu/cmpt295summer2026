@@ -95,3 +95,191 @@ Watchpoint 2: $rbx
 Old value = 4
 New value = 0
 loop_top () at unknown.S:18
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
+warning: Error detected on fd 0
+error detected on stdin
