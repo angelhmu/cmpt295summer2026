@@ -68,20 +68,23 @@ dumb:
     je a
 
     #else: return a+a+b+dumb(a-1, b-1)
-    sub $1, %rdi
-    sub $1, %rsi
+    push %rdi
+    push %rsi
+    dec %rdi
+    dec %rsi
+    call dumb
+    pop %rsi
+    pop %rdi
     add %rdi, %rax
     add %rdi, %rax
     add %rsi, %rax
-    call dumb
-pop_loop:
-
+    ret
 
 b1:
     add $1, %rsi
-    push %rsi
+    mov %rsi, %rax
     ret
 a:
-    push %rdi
+    mov %rdi, %rax
     ret
     
