@@ -21,12 +21,14 @@ fibonacci:
     dec %rdi
     push %rdi
     call fibonacci
-    push %rax
+
     pop %rdi
     dec %rdi
+    push %rax
     call fibonacci
-    pop %r12
-    add %r12, %rax
+
+    pop %r8
+    add %r8, %rax
     ret
 a:
     mov %rdi, %rax
