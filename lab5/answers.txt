@@ -1,0 +1,4 @@
+1. I used CSIL VDI so I'm using whatever CPU those have.
+2. polynomial 6.2 ms faster, is_odd 691.3 ms faster, and mul 119.3 ms faster.
+3. They were typically slower than the faster algorithm but slower than the
+    first iteration of the function.
