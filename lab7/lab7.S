@@ -27,7 +27,7 @@ randint:
 fill_array:
 fill_loop:
     # check if n == 0
-    test %rdi, %rdi
+    test %rsi, %rsi
     jle fill_done
     # generate random number
     call randint
@@ -35,7 +35,7 @@ fill_loop:
     sub $128, %rax
     # add number to array
     mov %rax, (%rdi)
-    add $4, %rdi
+    add $8, %rdi
     dec %rsi
     jmp fill_loop
 fill_done:
