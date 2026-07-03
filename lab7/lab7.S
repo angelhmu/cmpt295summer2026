@@ -43,6 +43,25 @@ fill_loop:
 fill_done:
     ret
 dot:
+dot_loop:
+    # check if length == 0
+    test %rdx, %rdx
+    jle dot_done
+    # load first element of each array
+    mov (%rdi), %r8
+    mov (%rsi), %r9
+    # mulitply the elements together
+    imul %r9, %r8
+    # add to the result
+    add %r8, %rax
+    # move to next element of each array
+    add $8, %rdi
+    add $8, %rsi
+    # length--
+    dec %rdx
+    # jump to top of loop
+    jmp dot_loop
+dot_done:
     ret
 dot_struct:
     ret
