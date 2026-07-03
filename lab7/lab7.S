@@ -25,6 +25,20 @@ randint:
     # return seed
     ret
 fill_array:
+fill_loop:
+    # check if n == 0
+    test %rdi, %rdi
+    jle fill_done
+    # generate random number
+    call randint
+    and $0xff, %rax
+    sub $128, %rax
+    # add number to array
+    mov %rax, (%rdi)
+    add $4, %rdi
+    dec %rsi
+    jmp fill_loop
+fill_done:
     ret
 dot:
     ret
