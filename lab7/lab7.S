@@ -35,7 +35,9 @@ fill_loop:
     sub $128, %rax
     # add number to array
     mov %rax, (%rdi)
-    add $8, %rdi
+    # go to next array element
+    add $8, %rdi            # must be 8 because using 64-bit registers
+    # n--
     dec %rsi
     jmp fill_loop
 fill_done:
