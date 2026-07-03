@@ -1,5 +1,8 @@
     .section .note.GNU-stack,""
     .global randint
+    .global fill_array
+    .global dot
+    .global dot_struct
 
     .data
 seed:
@@ -8,7 +11,7 @@ seed:
 .text
 randint:
     # load seed
-    load seed(%rip), %rax
+    mov seed(%rip), %rax
     # load multiplier
     movabs $6364136223846793005, %r8
     # seed *= multiplier
@@ -20,4 +23,10 @@ randint:
     # seed >> 33
     shr $33, %rax
     # return seed
+    ret
+fill_array:
+    ret
+dot:
+    ret
+dot_struct:
     ret
