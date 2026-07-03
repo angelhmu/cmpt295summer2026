@@ -1,0 +1,10 @@
+1. gcc -Wall -Wpedantic -std=c17 -march=haswell lab7c.c tests.c lab7.S && ./a.out
+   gcc -Wall -Wpedantic -std=c17 -march=haswell lab7c.c timing.c lab7.S && ./a.out
+2.  terminal output:
+    warmup(5) calculated -1599990000000000 in 12.81 ns/elt
+    dot(arr1, arr2, LENGTH) calculated      -6482137000 in  0.67 ns/elt
+    dot_c(arr1, arr2, LENGTH) calculated      -6482137000 in  2.32 ns/elt
+    dot_struct(arr_pair, LENGTH) calculated      -6482137000 in  0.69 ns/elt
+    dot_struct_c(arr_pair, LENGTH) calculated      -6482137000 in  2.31 ns/elt
+
+    Based on these results, assembly was obviously faster than the c code versions.
