@@ -1,0 +1,4 @@
+1. array_row was almost 3 times faster for some of the array sizes.
+    At most, the array_col took about 40ms to calculate on a 20480*250 array,
+    whereas the array_row took about 10ms to calculate on a 2*2560000 array.
+2. 
