@@ -1,5 +1,11 @@
     .section .note.GNU-stack,""
+    .global hailstone_length_c
+    .global hailstone_length
+    .global hailstone_length_cmov
     .text
+
+haistone_length_c:
+    ret
 
 hailstone_length:
     mov $0, %rax
@@ -21,3 +27,8 @@ is_even:
     jmp loop_h
 done_h:
     ret
+
+hailstone_length_cmov:
+    mov $0, %rax
+loop:
+    mov %rdi, %r8
