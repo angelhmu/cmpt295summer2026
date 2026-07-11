@@ -1,11 +1,7 @@
     .section .note.GNU-stack,""
-    .global hailstone_length_c
     .global hailstone_length
     .global hailstone_length_cmov
     .text
-
-haistone_length_c:
-    ret
 
 hailstone_length:
     mov $0, %rax
@@ -29,6 +25,23 @@ done_h:
     ret
 
 hailstone_length_cmov:
-    mov $0, %rax
+    xor %rax, %rax
 loop:
+    cmp $1, %rdi
+    je done
+
+    # odd case
     mov %rdi, %r8
+    imul $3, %r8
+    add $1, %r8
+    # even case
+    mov %rdi, %r9
+    shr $1, %r9
+    test $1, %rdi
+    mov %r8, %rdi
+    cmovz %r9, %rdi
+
+    inc %rax
+    jmp loop
+done:
+    ret

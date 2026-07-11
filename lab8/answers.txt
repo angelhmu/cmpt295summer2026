@@ -1,4 +1,14 @@
 1. array_row was almost 3 times faster for some of the array sizes.
     At most, the array_col took about 40ms to calculate on a 20480*250 array,
     whereas the array_row took about 10ms to calculate on a 2*2560000 array.
-2. 
+2. its taking quadruple the amount of time to calculate when you quadruple
+    the size of the array:
+    Array size: 8192kB
+    Calculated -2.58582 in     2.16ms on 1*1048576 array.
+    Array size: 32768kB
+    Calculated 38.0239 in     8.72ms on 1*4194304 array.
+    Array size: 131072kB
+    Calculated 476.624 in    34.56ms on 1*16777216 array.
+3. Using the cmov actually increased the calculation time and made it slower
+    than the c implementation. With gcc -O3 however, c is still faster than
+    my assembly. 

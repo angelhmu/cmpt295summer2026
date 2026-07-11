@@ -94,8 +94,8 @@ int main(int argc, char* argv[]) {
         if (n % w == 0) {
             uint64_t h = n / w;
             // treat array like it's h*w...
-            //res = time_it(sum_array_col, array, w, h);
-            res = time_it(sum_array_row, array, w, h);
+            res = time_it(sum_array_col, array, w, h);
+            //res = time_it(sum_array_row, array, w, h);
             printf("Calculated " DATA_PRINTF " in %8.2fms on %lu*%lu array.\n", res->result, res->elapsed_ms, w, h);
             free(res);
         }
