@@ -1,7 +1,7 @@
 1. I pinky promise that I had no leaks for the submitted array-2d.c code.
 2. 
-    Examining values: 2/4
-    Swapping values: 1/4
+    Examining values: 1/4
+    Swapping values: 2/4
     Branch mispredictions: 1/4
 
 ********************
