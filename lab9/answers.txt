@@ -3,7 +3,11 @@
     Examining values: 1/4
     Swapping values: 2/4
     Branch mispredictions: 1/4
-
+3.
+    // just_sort(bubble_sort, length, RANDOM);
+    // just_sort(bubble_sort, length, ALMOST_SORTED);
+    just_sort(bubble_sort, length, SORTED);
+4. random was 22% and sorted was 0.08%.
 ********************
 PROOF FOR QUESTION 1
 ********************
