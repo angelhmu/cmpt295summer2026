@@ -1,0 +1,18 @@
+hba56@asb9838nu-a05:~/cmpt295summer2026/lab10$ gcc -Wall -Wpedantic -std=c17 -march=haswell -O3 lab10c.c lab10.S timing.c && ./a.out
+1. 
+                   warmup took    40.3 ms
+                   warmup took    40.0 ms
+             dot_double_c took    40.0 ms
+               dot_double took    40.4 ms
+             dot_single_c took    34.9 ms
+               dot_single took    36.8 ms
+2.
+       map_poly_double_c1 took    54.3 ms
+       map_poly_double_c2 took    54.5 ms
+          map_poly_double took   154.2 ms
+        map_poly_single_c took    27.3 ms
+          map_poly_single took   127.6 ms
+3. for an array length of 10000000:
+    SIN_X87     took    252.5 ms
+    SIN_STDLIB  took    80.2 ms
+using the standard library sin was much faster.

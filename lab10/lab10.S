@@ -1,5 +1,5 @@
     .section .note.GNU-stack,""
-    .global dot_double, dot_single, map_poly_double, map_poly_single
+    .global dot_double, dot_single, map_poly_double, map_poly_single, sin_x87
     .text
 dot_double:
     pxor %xmm0, %xmm0
@@ -75,4 +75,17 @@ ms_loop:
     inc %rcx
     jmp ms_loop
 ms_done:
+    ret
+
+sin_x87:
+    mov $0, %rcx
+s87_loop:
+    cmp %rdx, %rcx
+    jae s87_ret
+    fldl (%rdi, %rcx, 8)
+    fsin
+    fstpl (%rsi, %rcx, 8)
+    inc %rcx
+    jmp s87_loop
+s87_ret:
     ret
