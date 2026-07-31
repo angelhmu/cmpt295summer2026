@@ -14,9 +14,14 @@ ddv_loop:
     vmovupd (%rsi, %rcx, 8), %ymm2
     vmulpd %ymm2, %ymm1, %ymm1
     vaddpd %ymm1, %ymm0, %ymm0
-    inc %rcx
+    add $4, %rcx
     jmp ddv_loop
 ddv_done:
+    vextractf128 $1, %ymm0, %xmm1
+    addpd %xmm1, %xmm0
+    haddpd %xmm0, %xmm0
+
+    vzeroupper
     ret
 
 dot_single_vec:
@@ -29,12 +34,22 @@ dsv_loop:
     vmovups (%rsi, %rcx, 4), %ymm2
     vmulps %ymm2, %ymm1, %ymm1
     vaddps %ymm1, %ymm0, %ymm0
-    inc %rcx
+    add $8, %rcx
     jmp dsv_loop
 dsv_done:
+    vextractf128 $1, %ymm0, %xmm1
+    addps %xmm1, %xmm0
+    haddps %xmm0, %xmm0
+    haddps %xmm0, %xmm0
+
+    vzeroupper
     ret
 
 map_poly_double_vec:
+    vbroadcastsd %xmm0, %ymm0
+    vbroadcastsd %xmm1, %ymm1
+    vbroadcastsd %xmm2, %ymm2
+    vbroadcastsd %xmm3, %ymm3
     xor %rcx, %rcx
 mdv_loop:
     cmp %rdx, %rcx
@@ -52,12 +67,16 @@ mdv_loop:
     
     vmovupd %ymm6, (%rsi, %rcx, 8)
 
-    inc %rcx
+    add $4, %rcx
     jmp mdv_loop
 mdv_done:
     ret
 
 map_poly_single_vec:
+    vbroadcastss %xmm0, %ymm0
+    vbroadcastss %xmm1, %ymm1
+    vbroadcastss %xmm2, %ymm2
+    vbroadcastss %xmm3, %ymm3
     xor %rcx, %rcx
 msv_loop:
     cmp %rdx, %rcx
@@ -75,7 +94,7 @@ msv_loop:
     
     vmovups %ymm6, (%rsi, %rcx, 4)
 
-    inc %rcx
+    add $8, %rcx
     jmp msv_loop
 msv_done:
     ret
