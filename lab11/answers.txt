@@ -1,0 +1,30 @@
+1. My assembly code was in general much slower compared to the compiler.
+2. Double-precision took almost twice as much time comapred to the single-
+    precision.
+3. Because of how the calculations are done for the dot product and the
+    map polynomial. Dot product results depend on the previous iteration
+    results. Map polynomial results, however, can be mostly done in parallel.
+
+hba56@asb9838nu-a05:~/cmpt295summer2026/lab11$ g++ -Ivectorclass -Wall -Wpedantic -march=haswell -O3 lab11c.cpp lab11.S lab11_vc.cpp timing.cpp && ./a.out
+                   warmup took    20.3 ms
+                   warmup took    20.9 ms
+             dot_double_c took    19.4 ms
+               dot_double took    22.5 ms
+           dot_double_vec took    12.5 ms
+            dot_double_vc took    13.8 ms
+
+             dot_single_c took    17.8 ms
+               dot_single took    18.1 ms
+           dot_single_vec took     6.2 ms
+            dot_single_vc took     7.8 ms
+
+       map_poly_double_c1 took    27.3 ms
+       map_poly_double_c2 took    26.9 ms
+          map_poly_double took    75.0 ms
+      map_poly_double_vec took    27.0 ms
+       map_poly_double_vc took    27.1 ms
+
+        map_poly_single_c took    13.4 ms
+          map_poly_single took    66.4 ms
+      map_poly_single_vec took    13.8 ms
+       map_poly_single_vc took    13.5 ms
