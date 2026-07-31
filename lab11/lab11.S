@@ -14,7 +14,7 @@ ddv_loop:
     vmovupd (%rsi, %rcx, 8), %ymm2
     vmulpd %ymm2, %ymm1, %ymm1
     vaddpd %ymm1, %ymm0, %ymm0
-    add $4, %rcx
+    add $1, %rcx
     jmp ddv_loop
 ddv_done:
     ret
@@ -29,7 +29,7 @@ dsv_loop:
     vmovups (%rsi, %rcx, 4), %ymm2
     vmulps %ymm2, %ymm1, %ymm1
     vaddps %ymm1, %ymm0, %ymm0
-    add $4, %rcx
+    add $1, %rcx
     jmp dsv_loop
 dsv_done:
     ret
