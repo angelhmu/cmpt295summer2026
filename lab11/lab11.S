@@ -14,7 +14,7 @@ ddv_loop:
     vmovupd (%rsi, %rcx, 8), %ymm2
     vmulpd %ymm2, %ymm1, %ymm1
     vaddpd %ymm1, %ymm0, %ymm0
-    add $1, %rcx
+    inc %rcx
     jmp ddv_loop
 ddv_done:
     ret
@@ -29,15 +29,55 @@ dsv_loop:
     vmovups (%rsi, %rcx, 4), %ymm2
     vmulps %ymm2, %ymm1, %ymm1
     vaddps %ymm1, %ymm0, %ymm0
-    add $1, %rcx
+    inc %rcx
     jmp dsv_loop
 dsv_done:
     ret
 
 map_poly_double_vec:
+    xor %rcx, %rcx
+mdv_loop:
+    cmp %rdx, %rcx
+    jge mdv_done
+
+    vmovupd (%rdi, %rcx, 8), %ymm4    # x
+    vmovupd %ymm4, %ymm6              # temp
+
+    vmulpd %ymm0, %ymm6, %ymm6  # 1. x * a
+    vaddpd %ymm1, %ymm6, %ymm6  # 2. b + [1]
+    vmulpd %ymm4, %ymm6, %ymm6  # 3. x * [2]
+    vaddpd %ymm2, %ymm6, %ymm6  # 4. c + [3]
+    vmulpd %ymm4, %ymm6, %ymm6  # 5. x * [4]
+    vaddpd %ymm3, %ymm6, %ymm6  # 6. d + [5]
+    
+    vmovupd %ymm6, (%rsi, %rcx, 8)
+
+    inc %rcx
+    jmp mdv_loop
+mdv_done:
     ret
 
 map_poly_single_vec:
+    xor %rcx, %rcx
+msv_loop:
+    cmp %rdx, %rcx
+    jge msv_done
+
+    vmovups (%rdi, %rcx, 4), %ymm4    # x
+    vmovups %ymm4, %ymm6              # temp
+
+    vmulps %ymm0, %ymm6, %ymm6  # 1. x * a
+    vaddps %ymm1, %ymm6, %ymm6  # 2. b + [1]
+    vmulps %ymm4, %ymm6, %ymm6  # 3. x * [2]
+    vaddps %ymm2, %ymm6, %ymm6  # 4. c + [3]
+    vmulps %ymm4, %ymm6, %ymm6  # 5. x * [4]
+    vaddps %ymm3, %ymm6, %ymm6  # 6. d + [5]
+    
+    vmovups %ymm6, (%rsi, %rcx, 4)
+
+    inc %rcx
+    jmp msv_loop
+msv_done:
     ret
 
 ####
